@@ -1,0 +1,197 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Fondo con gradiente oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+}
+
+/* Estilos para el contenedor principal */
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 30px;
+    font-weight: 600;
+    color: #1abc9c; /* Color verde aqua */
+    text-shadow: 0 0 15px rgba(26, 188, 156, 0.7); /* Efecto de luz */
+}
+
+/* Estilos para el botón de añadir alumno */
+.open-modal-button {
+    background-color: #1abc9c; /* Verde aqua */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s; /* Efecto de transformación */
+}
+
+.open-modal-button:hover {
+    background-color: #16a085; /* Verde más oscuro */
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+}
+
+/* Estilos para la tabla de alumnos */
+.users-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.users-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.users-table table:hover {
+    transform: translateY(-2px); /* Ligeramente se eleva al pasar el mouse */
+}
+
+.users-table thead {
+    background-color: #1abc9c; /* Color del encabezado */
+    color: white;
+    text-align: left;
+}
+
+.users-table th, .users-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(236, 240, 241, 0.3); /* Línea de separación */
+}
+
+.users-table tbody tr:nth-child(odd) {
+    background-color: rgba(236, 240, 241, 0.1); /* Color de filas impares */
+}
+
+.users-table tbody tr:nth-child(even) {
+    background-color: rgba(236, 240, 241, 0.2); /* Color de filas pares */
+}
+
+.users-table tbody tr:hover {
+    background-color: rgba(236, 240, 241, 0.3); /* Color al pasar el mouse */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los botones de eliminar y editar en la tabla */
+.users-table--edit,
+.users-table--delete {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Botón de Editar - estilo futurista */
+.users-table--edit {
+    background-color: #3498db; /* Azul */
+    color: white;
+    border: none;
+}
+
+.users-table--edit:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+}
+
+/* Botón de Eliminar - estilo futurista */
+.users-table--delete {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    border: none;
+}
+
+.users-table--delete:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+}
+
+/* Efecto general para botones de acción en la tabla */
+.users-table--edit:focus,
+.users-table--delete:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.7); /* Efecto de brillo en el enfoque */
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el formulario del modal */
+.users-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.users-form input[type="text"],
+.users-form input[type="number"],
+.users-form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(26, 188, 156, 0.5);
+    border-radius: 4px;
+    background: rgba(236, 240, 241, 0.2); /* Fondo del input */
+    color: #34495e; /* Color de texto oscuro */
+}
+
+.users-form input[type="submit"] {
+    background-color: #1abc9c; /* Verde aqua */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.users-form input[type="submit"]:hover {
+    background-color: #16a085; /* Verde más oscuro */
+}
+
+/* Estilos para el botón de cerrar el modal */
+.close-button {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
